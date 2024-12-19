@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunday.com</title>
+    <style>
+        /* Center the content both horizontally and vertically */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="message"></h1>
+
+    <script>
+        // Get the current day (0 = Sunday, 1 = Monday, ...)
+        const today = new Date().getDay();
+        
+        // Set the message based on the day
+        const message = (today === 0) ? 'YES!' : 'NO!';
+
+        // Display the message on the page
+        document.getElementById('message').innerText = message;
+    </script>
+</body>
+</html>
